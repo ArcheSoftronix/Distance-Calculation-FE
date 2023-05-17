@@ -128,7 +128,7 @@ const CalculateDistance = () => {
               {/* show response message */}
               {error ? (
                 error.statusCode === 200 ? (
-                  <> {<p className="response">{error.data}</p>}</>
+                  <> {<p className="response">{error.message}</p>}</>
                 ) : (
                   <> {<p className="responseRed">{error.message}</p>}</>
                 )
