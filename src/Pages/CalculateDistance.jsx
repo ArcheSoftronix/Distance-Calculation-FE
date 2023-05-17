@@ -32,7 +32,7 @@ const CalculateDistance = () => {
   const handleuser = (data) => {
     axios
       .post(
-        "http://192.168.1.199:16523/api/Distance/GetDistanceByZipCodesAsync",
+        "https://distancefinder-be.archesoftronix.in/api/Distance/GetDistanceByZipCodesAsync",
         {
           fromZipCode: data.fromZipCode,
           toZipCode: data.toZipCode,
