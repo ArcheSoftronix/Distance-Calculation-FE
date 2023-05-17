@@ -13,6 +13,7 @@ export const userFormValidator = {
         },
     },
 
+    
     // validation for destination zipcode
     toZipCode: {
         required: {
