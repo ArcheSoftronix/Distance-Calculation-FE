@@ -9,7 +9,7 @@ const CalculateDistance = () => {
   // useState for set values
   const [isSubmit, setIsSubmit] = useState(false);
   const [error, setError] = useState("");
-
+  console.log("error", error);
   // initial data
   const initData = {
     fromZipCode: "",
@@ -62,7 +62,7 @@ const CalculateDistance = () => {
                 <div class="form-outline">
                   {/* for source code */}
                   <label class="form-label" for="typeNumber">
-                    Enter Source Zip Code :
+                  Source Zip Code :
                   </label>
                   <input
                     type="tel"
@@ -72,6 +72,7 @@ const CalculateDistance = () => {
                       /(\d{3})(\d{3})(\d{4})/,
                       "$1-$2-$3"
                     )}
+                    maxlength="5"
                     onBlur={() => {
                       handleBlur("fromZipCode");
                     }}
@@ -84,7 +85,7 @@ const CalculateDistance = () => {
                   <div className="formLable">
                     {/* for destination code */}
                     <label class="form-label" for="typeNumber">
-                      Enter Destination Zip Code :
+                      Destination Zip Code :
                     </label>
                   </div>
                   <div className="formInput">
@@ -97,6 +98,7 @@ const CalculateDistance = () => {
                         /(\d{3})(\d{3})(\d{4})/,
                         "$1-$2-$3"
                       )}
+                      maxlength="5"
                       onBlur={() => {
                         handleBlur("toZipCode");
                       }}
@@ -108,7 +110,7 @@ const CalculateDistance = () => {
                 <div className="text-center mt-5">
                   {/* submit and reset button */}
                   <button type="submit" class="btn btn-success">
-                    Submit
+                    Calculate
                   </button>
                   <button
                     title="Reset"

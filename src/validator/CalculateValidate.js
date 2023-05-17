@@ -4,7 +4,7 @@ export const userFormValidator = {
     fromZipCode: {
         required: {
             value: true,
-            message: "Source Zipcode is required",
+            message: "Please Enter Source Zipcode",
         },
         custom: {
             isValid: (value) =>
@@ -17,7 +17,7 @@ export const userFormValidator = {
     toZipCode: {
         required: {
             value: true,
-            message: "Destination Zipcode is required",
+            message: "Please Enter Destination Zipcode",
         },
         custom: {
             isValid: (value) =>
